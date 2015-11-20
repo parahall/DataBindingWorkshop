@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
+
     private static final int USER_COUNT = 10;
 
     @NonNull
@@ -23,13 +24,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
 
     public UserAdapter() {
         mUsers = new ArrayList<>(10);
-        for (int i = 0; i < USER_COUNT; i ++) {
+        for (int i = 0; i < USER_COUNT; i++) {
             User user = new User(Randoms.nextFirstName(), Randoms.nextLastName());
             mUsers.add(user);
         }
     }
 
     public static class UserHolder extends RecyclerView.ViewHolder {
+
         private UserItemBinding mBinding;
 
         public UserHolder(View itemView) {
